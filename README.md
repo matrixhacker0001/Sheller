@@ -1,4 +1,6 @@
-# Sheller-v2.0
+# Sheller-v2.1
+
+A small update in powershell script with bug fixes.
 
 This is a new tool to create and deploy listeners for the reverse connections of the clients using multiple OS or scripts.
 
